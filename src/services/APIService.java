@@ -241,7 +241,7 @@ public class APIService extends Service {
 	{
 		return userid!=null && token!=null;
 	}
-
+///TEST
 	public void saveBackGroundProcess() {
 		FileOutputStream fout;
 		try {
