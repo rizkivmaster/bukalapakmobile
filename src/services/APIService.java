@@ -237,7 +237,7 @@ public class APIService extends Service {
 		editor.commit();
 	}
 	
-	public isActive()
+	public boolean isActive()
 	{
 		return userid!=null && token!=null;
 	}
