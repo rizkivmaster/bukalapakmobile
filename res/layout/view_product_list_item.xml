@@ -32,6 +32,15 @@
         
 	<!--  </LinearLayout>-->
    
+   
+   <LinearLayout
+       android:id="@+id/panel_data_produk"
+       android:layout_toRightOf="@id/image_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+   
 	<!-- Nama Barang-->
     <TextView
         android:id="@+id/title"
@@ -42,7 +51,7 @@
         android:text="@string/product_name"
        />
     
-    <!-- available/terjual-->
+    <!-- status available/terjual-->
     <TextView
         android:id="@+id/status"
         android:layout_toRightOf="@id/image_item"
@@ -54,9 +63,30 @@
         android:text=" terjual "
         />  
     
-    <!--  Stok Barang -->
-	
-	<!-- Harga Barang -->
+   
+     <!--  Stok Barang -->
+	<TextView
+	    android:id="@+id/stock"
+	  
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Stok: 21" />
+    </LinearLayout>
+    <!-- tombol edit -->
+	<!--  <TextView
+	    android:id="@+id/btn_edit"
+	    android:layout_below="@id/price"
+	    android:layout_marginLeft="110dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/status"
+	    android:layout_toRightOf="@+id/status"
+	    android:text="Edit"
+	    android:textColor="#a38228"
+	    />-->
+
+<!-- Harga Barang -->
     <TextView
         android:id="@+id/price"
         android:gravity="right"
@@ -70,30 +100,6 @@
         android:layout_height="wrap_content"
         android:text="Rp 150,000"
          />
-    
-    <!-- tombol edit -->
-	<TextView
-	    android:id="@+id/btn_edit"
-	    android:layout_below="@id/price"
-	    android:layout_marginLeft="110dp"
-	    android:layout_marginTop="10dp"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignTop="@+id/status"
-	    android:layout_toRightOf="@+id/status"
-	    android:text="Edit"
-	    android:textColor="#a38228"
-	    />
-
-	<!--  <Button
-	    android:id="@+id/btn_edit"
-	    android:layout_below="@id/price"
-	    android:layout_marginLeft="110dp"
-	    android:layout_width="35dp"
-	    android:layout_height="35dp"
-	    android:layout_alignTop="@+id/status"
-	    android:layout_toRightOf="@+id/status"
-	    android:drawableTop="@drawable/content_edit" />-->
       
      <!-- Rightend Arrow    
      <ImageView android:layout_width="wrap_content"
@@ -104,13 +110,12 @@
      	android:layout_marginRight="10dp"
      	/>-->
 
-	<TextView
-	    android:id="@+id/stock"
-	    style="@style/product_stock"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/status"
-	    android:layout_below="@+id/status"
-	    android:text="Stok: 21" />
+	<Button
+	    android:id="@+id/btn_edit"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_alignBottom="@+id/panel_data_produk"
+	    android:layout_alignRight="@+id/price"
+	    android:drawableTop="@drawable/content_edit" />
 
 </RelativeLayout>
