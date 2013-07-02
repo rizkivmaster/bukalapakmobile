@@ -1,3 +1,4 @@
+//APIAPIAPI
 package services;
 
 import java.io.BufferedReader;
@@ -237,11 +238,10 @@ public class APIService extends Service {
 		editor.commit();
 	}
 	
-	public isActive()
+	public boolean isActive()
 	{
 		return userid!=null && token!=null;
 	}
-
 	public void saveBackGroundProcess() {
 		FileOutputStream fout;
 		try {
