@@ -236,8 +236,18 @@
                 android:typeface="sans"
                 android:textColor="#000"
                 android:text="Biaya Kirim Gratis?"
-                android:layout_below="@+id/checkJasaKurirJNE"
+                android:layout_below="@id/checkJasaKurirJNE"
     ></TextView>
+   	<Button 
+   	    android:layout_height="wrap_content"
+   	    android:layout_width="fill_parent" 
+   	    android:text="- Tidak ada kota yang dipilih -"
+   	    android:id="@+id/pilihdelivery_button" 
+   	    android:padding="5dip" 
+   	    style="?android:attr/spinnerStyle"
+   	    android:layout_below="@id/pilihdelivery_text"
+   	    
+   	    />
    	<LinearLayout  android:id="@+id/listSpecs"
    	    android:layout_width="fill_parent"
    	    android:orientation="vertical"
@@ -253,7 +263,7 @@
                 android:typeface="sans"
                 android:textColor="#000"
                 android:text="Deskripsi"
-                android:layout_below="@+id/pilihdelivery_text"
+                android:layout_below="@id/pilihdelivery_button"
     ></TextView>
    	
    	<EditText

@@ -15,10 +15,12 @@ import org.json.JSONObject;
 
 import services.APIService;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
@@ -39,6 +41,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -79,8 +82,10 @@ public class UploadProductActivity extends Activity {
 	RadioButton baru;
 	String username;
 	String password;
+	String [] list_kota;
 	Button image_select;
 	Button unggah;
+	Button city_select;
 	CheckBox nego;
 	CheckBox kurirJNE;
 	CheckBox kurirTIKI;
@@ -98,6 +103,9 @@ public class UploadProductActivity extends Activity {
 	// SessionManager session;
 	private APIService api;
 	private ServiceConnection mConnection;
+	
+	protected CharSequence [] kota;
+	protected ArrayList<CharSequence> selectedKota;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -111,6 +119,11 @@ public class UploadProductActivity extends Activity {
 		len = (LinearLayout) findViewById(R.id.listSpecs);
 		listImages = (LinearLayout) findViewById(R.id.listImages);
 		
+		// untuk multiplechoice
+		list_kota = getResources().getStringArray(R.array.daftar_kota);
+		kota = (CharSequence []) list_kota;
+		selectedKota = new ArrayList<CharSequence>();
+
 		
 
 		
@@ -136,6 +149,7 @@ public class UploadProductActivity extends Activity {
 		image_select = (Button) findViewById(R.id.photo_button);
 		imgview = (ImageView) findViewById(R.id.photo_image);
 		unggah = (Button) findViewById(R.id.product_upload_save_button);
+		city_select = (Button) findViewById(R.id.pilihdelivery_button);
 		registerForContextMenu(image_select);
 		registerForContextMenu(namaBarang);
 		ComponentName myService = startService(new Intent(this, APIService.class));
@@ -251,6 +265,18 @@ public class UploadProductActivity extends Activity {
 				}
 			}
 		});
+		
+		city_select.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View view) {
+				switch(view.getId()) {
+					case R.id.pilihdelivery_button:
+						showSelectCityDialog();
+						break;
+
+					default:
+						break;
+				}
+			}});
 		unggah.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -518,7 +544,11 @@ public class UploadProductActivity extends Activity {
 			product.put("new", "false");
 		if (baru.isChecked())
 			product.put("new", "true");
-		product.put("negotiable", "true");
+		if(nego.isChecked())
+			product.put("negotiable", "true");
+		else 
+			product.put("negotiable", "false");
+		
 		JSONObject attrib_det = new JSONObject();
 		for (String k : attribs.keySet()) {
 			View v = specs.get(k);
@@ -594,6 +624,82 @@ public class UploadProductActivity extends Activity {
 			toast.show();
 		}
 	}
+	
+	protected void showSelectCityDialog() {
+		final boolean[] checkedColours = new boolean[kota.length];
+		int count = kota.length;
+		
+
+		for(int i = 0; i < count; i++)
+			checkedColours[i] = selectedKota.contains(kota[i]);
+
+		DialogInterface.OnMultiChoiceClickListener coloursDialogListener = new DialogInterface.OnMultiChoiceClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+				ListView dialogListView = ((AlertDialog)dialog).getListView();
+				if(isChecked){
+					
+					if(which==0)
+					{
+						 	if(dialogListView!=null)
+						 	{
+						 		selectedKota.clear(); 
+						 		//Log.i(tagName, "Dialog List Item Count"+dialogListView.getCount());
+								 for (int position = 0; position < dialogListView.getCount(); position++) {
+									 if(position>0)
+									 {
+										 //Log.i(tagName, "Iterating for Adding Positions : "+position);
+										 // Check items, disable and make them unclickable
+										 dialogListView.setItemChecked(position, true);										 
+										 selectedKota.add(kota[position]);
+									 }
+								 }
+							}
+						 	
+					} else {
+						//ini seharusnya bikin si check all unchecked
+						checkedColours[0] = false;
+						dialogListView.setItemChecked(0, false);
+						selectedKota.add(kota[which]);
+					}
+				}
+			
+				else
+					selectedKota.remove(kota[which]);
+
+				//onChangeSelectedColours();
+			}
+		};
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Pilih Kota");
+		builder.setMultiChoiceItems(kota, checkedColours, coloursDialogListener);
+		builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
+	    {
+	        @Override
+	        public void onClick(DialogInterface dialog, int whichButton)
+	        {
+	           // SHOULD NOW WORK
+	        	Toast.makeText(UploadProductActivity.this, "HAHAI", Toast.LENGTH_SHORT).show();
+	        	onChangeSelectedCity();
+	        }
+	    });
+		
+
+		AlertDialog dialog = builder.create();
+		dialog.show();
+	}
+	
+	protected void onChangeSelectedCity() {
+		StringBuilder stringBuilder = new StringBuilder();
+
+		for(CharSequence colour : selectedKota)
+			stringBuilder.append(colour + ",");
+		
+		//ambilnya di string builder, masukin arraylist aja ya nanti
+		city_select.setText(stringBuilder.toString());
+	}
+
 
 	private void addImage(Bitmap b, String g) throws Exception {
 		final String s = g;

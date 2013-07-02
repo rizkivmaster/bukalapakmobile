@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="daftar_kota">
+    	<item>Seluruh Indonesia</item>
+    	<item>Bali</item>
+    	<item>Banten</item>
+    	<item>DKI Jakarta</item>
+    	<item>Bengkulu</item>
+    	<item>Gorontalo</item>
+    	<item>Jawa Barat</item>
+    	<item>Jawa Tengah</item>
+    	<item>Kalimantan Barat</item>
+    	<item>Kalimantan Selatan</item>
+    	<item>Kalimantan Timur</item>
+    	<item>Kalimantan Tengah</item>
+    	<item>Kalimantan Utara</item>
+    	<item>Daerah Istimewa Yogyakarta</item>
+    	<item>Jambi</item>
+    	<item>Jawa Timur</item>
+    	<item>Kepulauan Bangka Belitung</item>
+    	<item>Kepulauan Riau</item>
+    	<item>Riau</item>
+    	<item>Lampung</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Nanggroe Aceh Darussalam</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Papua</item>
+        <item>Papua Barat</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Utara</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Sumatera Selatan</item>
+        
+    </string-array>
+</resources>
