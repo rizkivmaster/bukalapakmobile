@@ -30,23 +30,5 @@
        android:layout_marginBottom="3dp"   
        android:src="@drawable/logo_white"
        />
-   
-   <ImageView 
-       android:id="@+id/divider"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginRight="35dp"
-       android:layout_alignParentRight="true"   
-       android:src="@drawable/divider"
-       />
-    
-   <ImageView
-       android:id="@+id/home_icon"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentRight="true"
-       android:layout_marginRight="5dp"
-       android:src="@drawable/home"
-       
-       ></ImageView>
+ 
 </RelativeLayout>
