@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+   
+    <LinearLayout
+        android:id="@+id/panel_data_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+        <LinearLayout
+        android:id="@+id/panel_data_trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="3dp"
+        >
+      
+	<!-- Nama Barang-->
+    <TextView
+        android:id="@+id/product_trans"
+        style="@style/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_name"
+       />
+    
+    <!-- jumlah yang dibeli-->
+    
+   <TextView
+       android:id="@+id/total_item_trans"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+      
+       android:text="x1"
+       ></TextView>
+   
+   <!-- harga -->
+	<TextView 
+	    android:id="@+id/price_trans"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+	    
+	    android:text="Rp 10.000"
+	    /></LinearLayout>
+
+    	
+   <!-- Nomor transaksi -->
+   <TextView
+	    android:id="@+id/trans_id"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   
+	    android:text="130701133420" 
+	    android:textSize="12sp"
+	    ></TextView>
+	<!-- tanggal transaksi -->
+	<TextView
+	    android:id="@+id/trans_date"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    
+	    android:text="18/10/2012    11:27"
+	    ></TextView>
+	
+	<!-- Status -->
+	
+	<LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	   
+	    >
+	
+	<TextView
+	    android:id="@+id/trans_status"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    
+	    android:text="Status:"
+	    android:textStyle="bold"
+	    ></TextView>
+	<ImageView
+	    android:id="@+id/trans_ordered" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/payment_statuses_016"
+	  
+	        ></ImageView>
+	
+	<ImageView
+	    android:id="@+id/trans_paid" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/payment_statuses_018"
+	        ></ImageView>
+	
+	<ImageView
+	    android:id="@+id/trans_sent" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/payment_statuses_009"
+	        ></ImageView>
+	
+
+	<ImageView
+	    android:id="@+id/trans_arrived" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/payment_statuses_004"
+	        ></ImageView>
+	
+	<ImageView
+	    android:id="@+id/trans_transfered" 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/payment_statuses_005"
+	        ></ImageView>
+	</LinearLayout>
+	
+	</LinearLayout>
+	<!-- Tombol kirim barang -->
+
+	  <Button
+	      android:id="@+id/trans_btnsend"
+	      android:layout_width="100dp"
+	      android:layout_height="40dp"
+	      android:layout_below="@id/price_trans"
+	  	  android:layout_toRightOf="@id/trans_date"
+	  	  android:layout_alignParentRight="true"
+	  	  android:layout_centerVertical="true"
+	  	  android:layout_marginLeft="100dp"
+	  	  android:drawableLeft="@drawable/payment_statuses_019"
+	      android:layout_marginRight="20dp"
+	      android:text="Kirim Brg"
+	      android:textSize="10sp" />
+
+	    <!--  Rightend Arrow    -->
+     <ImageView android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:src="@drawable/arrow"
+     	android:layout_alignParentRight="true"
+     	android:layout_centerVertical="true"
+     	android:layout_marginRight="5dp"
+     	/>
+</RelativeLayout>
