@@ -1,12 +1,15 @@
 package view.user.login;
 
-import com.bukalapakmobile.R;
-
 import listener.APIListener;
+import model.system.InternetTask;
 import services.APIService;
+import view.home.Dashboard;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -18,6 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.bukalapakmobile.R;
 
 
 public class LoginActivity extends Activity {
@@ -31,6 +36,13 @@ public class LoginActivity extends Activity {
 		public void onServiceConnected(ComponentName arg0, IBinder arg1) {
 			api = ((APIService.MyBinder) arg1).getService();
 	        Toast.makeText(LoginActivity.this, "Connected to API Service", Toast.LENGTH_SHORT).show();
+			if(api.isActive())
+			{
+				startActivity(new Intent(
+						LoginActivity.this,
+						Dashboard.class));
+				finish();
+			}
 		}
 
 		@Override
@@ -58,37 +70,74 @@ public class LoginActivity extends Activity {
 				try {
 					String username = userText.getText().toString();
 					String password = passText.getText().toString();
-					api.retrieveNewAccess(username,password ,null/* new APIListener() {
+					if(api!=null)
+					{
+					api.retrieveNewAccess(username, password,
+							new APIListener() {
 
-						@Override
-						public void onSuccess(Object res, Exception e) {
-							progress.setVisibility(ProgressBar.GONE);
-							if(e==null)
-								startActivity(new Intent(LoginActivity.this,Berhasil.class));
-							else
-								Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-						}
+								ProgressDialog pd;
+								@Override
+								public void onEnqueue(InternetTask task) {
+									// TODO Auto-generated method stub
 
-						@Override
-						public void onHold() {
-							progress.setVisibility(ProgressBar.GONE);
-							Toast.makeText(LoginActivity.this, "Connection is pending", Toast.LENGTH_SHORT).show();
-						}
+								}
 
-						@Override
-						public void onExecute() {
-							progress.setVisibility(ProgressBar.VISIBLE);
-							// TODO Auto-generated method stub
-							
-						}
+								@Override
+								public void onExecute(final InternetTask task) {
+									// TODO Auto-generated method stub
+									pd = new ProgressDialog(
+											LoginActivity.this);
+									pd.setTitle("Login");
 
-						@Override
-						public void onEnqueue() {
-							// TODO Auto-generated method stub
-							
-						}
-						
-					}*/);
+									pd.setMessage("Tunggu sebentar, sedang otorisasi...");
+
+									pd.setCancelable(true);
+									pd.setOnCancelListener(new OnCancelListener() {
+										
+										@Override
+										public void onCancel(DialogInterface dialog) {
+											task.cancelProcess();
+										}
+									});
+
+									pd.setIndeterminate(true);
+
+									pd.show();
+								}
+
+								@Override
+								public void onSuccess(Object res, Exception e,
+										InternetTask task) {
+									pd.dismiss();
+									if (e == null)
+									{
+										startActivity(new Intent(
+												LoginActivity.this,
+												Dashboard.class));
+										finish();
+									}
+									else
+										Toast.makeText(LoginActivity.this,
+												e.getMessage(),
+												Toast.LENGTH_SHORT).show();
+								}
+
+								@Override
+								public void onHold(InternetTask task) {
+									pd.dismiss();
+									Toast.makeText(LoginActivity.this,
+											"Connection is pending",
+											Toast.LENGTH_SHORT).show();
+								}
+
+							});
+					}
+					else
+					{
+						Toast.makeText(LoginActivity.this,
+								"API is not connected",
+								Toast.LENGTH_SHORT).show();
+					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
