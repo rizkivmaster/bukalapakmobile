@@ -16,15 +16,15 @@
        
 	    <!-- checkbox item produk -->
 	    <CheckBox
-        android:id="@+id/check"
+        android:id="@+id/check_product_mylapak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"      
         android:layout_marginTop="10dip" />
 	    
 	    <!-- thumbnail image -->
 		<ImageView     
-			android:id="@+id/image_item"
-			android:layout_toRightOf="@id/check"   
+			android:id="@+id/image_product_mylapak"
+			android:layout_toRightOf="@id/check_product_mylapak"   
 	        android:layout_width="50dip"
 	        android:layout_height="50dip"
 	        android:layout_marginRight="10dip"
@@ -35,7 +35,7 @@
    
    <LinearLayout
        android:id="@+id/panel_data_produk"
-       android:layout_toRightOf="@id/image_item"
+       android:layout_toRightOf="@id/image_product_mylapak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -43,9 +43,9 @@
    
 	<!-- Nama Barang-->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_product_mylapak"
         style="@style/product_name"
-        android:layout_toRightOf="@id/image_item"
+        android:layout_toRightOf="@id/image_product_mylapak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/product_name"
@@ -53,9 +53,9 @@
     
     <!-- status available/terjual-->
     <TextView
-        android:id="@+id/status"
-        android:layout_toRightOf="@id/image_item"
-        android:layout_below="@id/title"
+        android:id="@+id/status_product_mylapak"
+        android:layout_toRightOf="@id/image_product_mylapak"
+        android:layout_below="@id/title_product_mylapak"
         android:textSize="12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
    
      <!--  Stok Barang -->
 	<TextView
-	    android:id="@+id/stock"
+	    android:id="@+id/stock_product_mylapak"
 	  
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
 
 <!-- Harga Barang -->
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/price_product_mylapak"
         android:gravity="right"
     	android:textSize="14sp"
   		

@@ -9,9 +9,11 @@ import android.widget.Button;
 
 public class BaseHeader extends Activity{
 	Button home;
+	Button refresh;
 	
 	public void setHeader(){
 		 home = (Button)findViewById(R.id.home_icon);
+		 refresh = (Button)findViewById(R.id.refresh_icon);
 		
 	
 	
@@ -20,6 +22,13 @@ public class BaseHeader extends Activity{
 			startActivity(new Intent(BaseHeader.this,Dashboard.class));
 			finish();
 		}});
+	
+	refresh.setOnClickListener(new View.OnClickListener() {
+		public void onClick(View view) {
+		finish();
+		startActivity(getIntent());
+		}});
 
 	}
+
 }
