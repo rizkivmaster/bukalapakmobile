@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+   
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+	
+    <!-- Include Header -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/actionbar_layout" />
+   
+<LinearLayout
+    android:id="@+id/panelAction"
+    android:layout_width="fill_parent"
+    android:layout_height="62dp"
+    
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    
+     >
+
+   <!-- kategori inbox -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btn_messageAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@id/message_delete"
+            android:clickable="true"
+            android:text="All" />
+
+        <TextView
+            android:id="@+id/btn_messageUnread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:clickable="true"
+            android:text="Unread" />
+
+        <TextView
+            android:id="@+id/btn_messageRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="10dip"
+            android:clickable="true"
+            android:text="Read" />
+    </LinearLayout>
+
+   <Button
+       android:id="@+id/message_delete"
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:layout_marginBottom="10dp"
+    
+       android:layout_marginTop="10dip"
+       android:background="@drawable/list_selector"
+       android:drawableLeft="@drawable/trash"
+       android:paddingLeft="8dp"
+       android:textSize="12sp" />
+       
+   <!--      <Button
+        android:id="@+id/message_compose_inbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/list_selector"
+        android:paddingRight="10dip"
+        android:text="compose"
+        android:textSize="12sp" />--> 
+	
+ </LinearLayout>
+     
+    <LinearLayout 
+    android:id="@+id/panelAction"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="382dp"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector" >
+
+        </ListView>
+    
+ </LinearLayout>
+
+
+</LinearLayout>

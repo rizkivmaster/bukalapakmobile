@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+	<!--  ListRow Left sized Thumbnail image -->
+	<LinearLayout android:id="@+id/thumbnail" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:padding="3dip"		
+        android:background="@drawable/image_bg" 
+	    android:layout_marginRight="5dip">
+        
+		<ImageView     
+			android:id="@+id/list_image"   
+	        android:layout_width="50dip"
+	        android:layout_height="50dip"
+	        android:src="@drawable/rating"/>
+        
+	</LinearLayout>
+    
+	
+	<RelativeLayout android:id="@+id/detail_msg" 
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:padding="3dip"		  
+       android:layout_toRightOf="@id/thumbnail"
+	    android:layout_marginRight="5dip">
+		
+	<!-- nama pengirim-->
+    <TextView
+        android:id="@+id/msg_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        
+        android:text="Dyah Inastra"
+        android:textColor="#040404"
+        android:typeface="sans" 
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+	<!-- isi pesan -->
+    <TextView
+        android:id="@+id/msg_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_sender"
+        android:textColor="#343434"
+        android:textSize="14sp"
+        
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Hello dfmsdkjfdjfsdjfjsdkjkkjfkemkmdmf,dmkwkkjdhfja" />
+</RelativeLayout>
+
+	
+	<!-- tanggal, waktu, hapus -->
+	<LinearLayout android:id="@+id/msg_misc" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/detail_msg"
+		android:layout_alignLeft="@id/detail_msg"
+		android:padding="3dip"		
+        android:orientation="horizontal"
+	    android:layout_marginRight="5dip">
+    
+	<!-- Tanggal -->
+
+		<TextView
+		    android:id="@+id/msg_date"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="5dip"
+		    android:layout_gravity="center_vertical"
+		    android:text="24/06/13 11.40"
+		    android:textSize="12sp" />
+      
+<!-- opsi hapus -->
+  <!--    <TextView
+        android:id="@+id/msg_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/msg_date"
+        android:layout_marginRight="10dip"
+        android:gravity="right"
+        android:text="hapus"
+        android:textSize="12sp"
+        android:textColor="#a38228"
+        android:clickable="true"
+/>-->
+
+    <Button
+        android:id="@+id/message_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/list_selector"
+        android:paddingTop="3dp"
+        android:drawableTop="@drawable/mini_trash"
+        android:textSize="12sp" />
+
+   </LinearLayout>
+</RelativeLayout>
