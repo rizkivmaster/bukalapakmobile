@@ -2,7 +2,11 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/FooterBar"
-    android:paddingTop="10dip">
+    android:paddingTop="5dip"
+    android:paddingBottom="15dip"
+    android:background="@drawable/header_gradient"
+    android:layout_gravity="bottom"
+    >
 
             <TextView
                 android:id="@+id/footer_text"
@@ -12,20 +16,19 @@
                 android:textSize="15sp"
                 
                  />
-            
-            <Button
-		        android:id="@+id/footer_logout"
-		        android:layout_width="100dp"
-		        android:layout_height="20dp"
-		        android:layout_alignParentRight="true"
-		        android:layout_marginBottom="10dip"
-		        android:layout_weight="0.10"
-		        android:background="@drawable/list_selector"
-		        android:text="Log Out"
-		        android:typeface="sans"
-		        android:textSize="15sp" 
-		        android:layout_marginRight="10dip" />
 
-            
+            <Button
+                android:id="@+id/footer_logout"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="@+id/footer_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.10"
+                android:background="@drawable/list_selector"
+                android:text="Log Out"
+                android:textSize="15sp"
+                android:typeface="sans" />
 
         </RelativeLayout>

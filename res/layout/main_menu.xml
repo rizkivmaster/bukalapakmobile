@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
     
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	 <!-- Include Header -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/actionbar_layout" />
+    
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Hai, user"
+        android:textColor="#a30046"
+        android:textSize="16sp"
+        ></TextView>
+    
+    <ListView
+        android:id="@+id/menu_list"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/mainmenu_selector"
+        
+         />
 
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+     >
+
+    <!-- Include footer -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        layout="@layout/footer_layout" />
+
+</LinearLayout>
+    
 </LinearLayout>
