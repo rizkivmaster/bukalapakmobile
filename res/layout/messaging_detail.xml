@@ -25,6 +25,8 @@
             style="@style/MenuTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            
             android:text="Message: Dyah Inastra" >
         </TextView>
 
@@ -43,8 +45,20 @@
         android:clickable="true"
 />
         -->
+<Button
+        android:id="@+id/message_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/list_selector"
+        android:paddingTop="3dp"
+        android:drawableTop="@drawable/mini_trash"
+        android:textSize="12sp" />
 
-        <Button
+
+<!-- button delete yang gede -->
+      <!--    <Button
             android:id="@+id/message_delete"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -53,30 +67,31 @@
             android:background="@drawable/list_selector"
             android:drawableLeft="@drawable/trash"
             android:paddingLeft="8dp"
-            android:textSize="12sp" />
+            android:textSize="12sp" />-->
+            
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/panelAction"
         android:layout_width="wrap_content"
-        android:layout_height="240dp"
-        android:layout_weight="0.04"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"
         android:background="#FFFFFFFF"
         android:orientation="vertical" >
 
         <ListView
             android:id="@+id/list"
             android:layout_width="fill_parent"
-            android:layout_height="240dp"
+            android:layout_height="250dp"
             android:divider="#808080"
             android:dividerHeight="1dp" >
         </ListView>
-    </LinearLayout>
-
-    <LinearLayout
+        
+        <LinearLayout
         android:id="@+id/panel_compose"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
         <!--
@@ -94,10 +109,10 @@
 
         <EditText
             android:id="@+id/compose_msg"
-            android:layout_width="200dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="2dp"
             android:inputType="textMultiLine"
             android:text="tulis pesan"
             android:textColor="#cccccc"
@@ -107,11 +122,13 @@
             android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+       
             android:background="@drawable/list_selector"
             android:text="Kirim" >
         </Button>
     </LinearLayout>
-
-</LinearLayout>
+    </LinearLayout>
+    
+    </LinearLayout>
+    

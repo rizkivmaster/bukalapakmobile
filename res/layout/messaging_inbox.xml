@@ -21,12 +21,25 @@
     android:orientation="horizontal"
     
      >
-
+     
+    <!-- judul tampilan -->
+    <TextView 
+        android:id="@+id/lbl_inbox"
+        style="@style/MenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:text="Inbox"
+        android:textSize="25sp"
+        android:layout_gravity="center_vertical"
+        ></TextView>
    <!-- kategori inbox -->
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
         android:gravity="right"
@@ -49,7 +62,9 @@
             android:layout_marginLeft="5dip"
             android:layout_marginTop="10dip"
             android:clickable="true"
-            android:text="Unread" />
+            android:text="Unread"
+            android:textStyle="bold"
+             />
 
         <TextView
             android:id="@+id/btn_messageRead"
@@ -60,8 +75,20 @@
             android:clickable="true"
             android:text="Read" />
     </LinearLayout>
+<Button
+        android:id="@+id/message_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/list_selector"
+        android:paddingTop="3dp"
+        android:drawableTop="@drawable/mini_trash"
+        android:textSize="12sp" />
 
-   <Button
+
+   <!-- tombol yang gede <Button
        android:id="@+id/message_delete"
        android:layout_width="50dp"
        android:layout_height="50dp"
@@ -71,7 +98,7 @@
        android:background="@drawable/list_selector"
        android:drawableLeft="@drawable/trash"
        android:paddingLeft="8dp"
-       android:textSize="12sp" />
+       android:textSize="12sp" />-->
        
    <!--      <Button
         android:id="@+id/message_compose_inbox"
