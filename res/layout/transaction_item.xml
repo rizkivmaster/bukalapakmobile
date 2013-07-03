@@ -61,6 +61,8 @@
 	    android:text="130701133420" 
 	    android:textSize="12sp"
 	    ></TextView>
+   
+   
 	<!-- tanggal transaksi -->
 	<TextView
 	    android:id="@+id/trans_date"

@@ -20,7 +20,8 @@
     android:layout_marginBottom="10dp"
     
         ></TextView>-->
-        
+    
+    <!-- logo bukalapak -->    
    <ImageView 
        android:id="@+id/header"
        android:layout_width="wrap_content"
@@ -31,8 +32,29 @@
        android:src="@drawable/logo_white"
        />
    
-   <ImageView 
+    <ImageView 
        android:id="@+id/divider"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginRight="85dp"
+       android:layout_alignParentRight="true"   
+       android:src="@drawable/divider"
+       />
+    
+    <!-- icon refresh -->
+     <ImageView 
+       android:id="@+id/refresh_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginRight="55dp"
+       android:layout_marginTop="3dp"
+       android:layout_alignParentRight="true"   
+       android:src="@drawable/nav_refresh"
+       />
+   
+   <!-- divider refresh dan home -->
+   <ImageView 
+       android:id="@+id/divider1"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginRight="35dp"
@@ -40,12 +62,15 @@
        android:src="@drawable/divider"
        />
     
+   
+   <!-- home icon -->
    <ImageView
        android:id="@+id/home_icon"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_alignParentRight="true"
        android:layout_marginRight="5dp"
+       android:layout_marginTop="2dp"
        android:src="@drawable/home"
        
        ></ImageView>
