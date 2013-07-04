@@ -24,7 +24,7 @@
 		android:layout_height="wrap_content"
 		android:padding="3dip"		
         android:background="@drawable/image_bg"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="5dp"
 	    android:layout_marginRight="5dip">
@@ -32,8 +32,8 @@
 	    <!-- gambar produk -->	    
 <ImageView     
 			android:id="@+id/desc_img"   
-	        android:layout_width="75dip"
-	        android:layout_height="75dip"
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
 	        android:src="@drawable/skin_pack"/>
 </RelativeLayout>
 
@@ -55,9 +55,9 @@
 <!-- harga produk -->
 <TextView
         android:id="@+id/desc_price"
-    	android:textSize="14sp"
+    	android:textSize="16sp"
   		android:layout_marginLeft="10dp"
-  		android:layout_marginTop="1dp"
+  		android:layout_marginTop="7dp"
   		android:layout_marginRight="15dp"
     	android:layout_marginBottom="15dp"     
         android:layout_width="fill_parent"
@@ -67,6 +67,35 @@
         android:text="Rp 150,000"
          />
 
+
+    <!-- tombol set terjual-->
+    <Button
+        android:id="@+id/btn_setterjual"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/desc_price"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/list_selector"
+        android:text="Set Terjual"
+        android:textSize="12sp"
+         ></Button>
+    
+    <!-- tombol edit barang-->
+    <Button
+        android:id="@+id/btn_editbarang"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/desc_price"
+        android:layout_toLeftOf="@id/btn_setterjual"
+        android:background="@drawable/list_selector"
+        android:text="Edit"
+         android:textSize="12sp"
+         ></Button>
+    
 <!-- label spesifikasi barang -->
 <TextView
     android:id="@+id/desc_speclabel"
