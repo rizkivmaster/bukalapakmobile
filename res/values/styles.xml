@@ -37,10 +37,10 @@
    <style name="SubMenuTitle">
        <item name="android:textColor">#a30046</item>
        <item name="android:textSize">14sp</item>
-       <item name="android:layout_marginLeft">20dp</item>
+       <item name="android:layout_marginLeft">10dp</item>
        <item name="android:layout_marginTop">10dp</item>
        <item name="android:layout_marginRight">10dp</item>
-       <item name="android:layout_marginBottom">10dp</item>
+       <item name="android:layout_marginBottom">5dp</item>
        <item name="android:layout_width">wrap_content</item>
        <item name="android:layout_height">15dp</item>
    </style>
