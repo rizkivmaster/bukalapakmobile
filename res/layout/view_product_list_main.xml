@@ -79,7 +79,7 @@
     android:orientation="vertical" >
 
         <ListView
-            android:id="@+id/list"
+            android:id="@+id/list_mylapak"
             android:layout_width="fill_parent"
             android:layout_height="360dp"
             android:divider="#b5b5b5"
