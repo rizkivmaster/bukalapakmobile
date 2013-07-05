@@ -28,7 +28,9 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="10dp"
-            android:text="Message: Dyah Inastra" >
+            android:text="Message: Dyah Inastra" 
+            android:textSize="20dp"
+            >
         </TextView>
 
         <!-- opsi hapus -->
