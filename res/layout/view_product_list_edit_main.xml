@@ -1,0 +1,361 @@
+<!-- Content Layout for CheckIn Tab -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+<RelativeLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+   
+    <include 
+        android:id="@+id/top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    layout="@layout/actionbar_layout" />
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"   
+    android:layout_gravity="top"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_below="@id/top"
+    >
+    <TextView
+        android:id="@+id/edit_kategori_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:typeface="sans"
+        android:textColor="#000"
+        android:text="Kategori"
+        > 
+    </TextView>
+    <Button
+        android:id="@+id/edit_kategori_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_centerInParent="true"
+        android:text="Kategori Sekarang"
+        android:layout_below="@id/edit_kategori_text"
+        style="?android:attr/spinnerStyle"
+        ></Button>
+    <TextView
+         android:id="@+id/edit_namabarang_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Nama Barang"
+                android:layout_below="@id/edit_kategori_button"
+    ></TextView>
+   	<EditText
+   	    		android:id="@+id/edit_namabarang_edittext"
+   	    		android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"          
+                android:gravity="top"
+                android:background="#b03944"
+                android:padding="10dp"
+                android:textColor="#fff"
+			    android:hint="ketik nama barang"
+			    android:layout_below="@id/edit_namabarang_text"
+                
+   	    ></EditText>
+   	
+   	<TextView
+         android:id="@+id/edit_kondisi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Kondisi Barang"
+                android:layout_below="@id/edit_namabarang_edittext"
+    ></TextView>
+   	<RadioGroup
+	        android:id="@+id/edit_radioKondisi"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_below="@id/edit_kondisi_text" >
+
+
+	   	    <RadioButton
+	        android:id="@+id/edit_radioBekas"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+	        android:layout_gravity="left"
+	        android:text="Bekas"
+	        android:textColor="#000" />
+
+	   	    <RadioButton
+	   	    android:id="@+id/edit_radioBaru"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_gravity="center"
+	   	    android:layout_marginRight="10dp"
+	   	    android:text="Baru" 
+	   	    android:textColor="#000"/>   	    
+
+	    </RadioGroup>
+	    
+   	<TextView
+         android:id="@+id/edit_hargabarang_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Harga Barang"
+                android:layout_below="@id/edit_radioKondisi"
+    ></TextView>
+   	<EditText
+   	    		android:id="@+id/edit_hargabarang_edittext"
+   	    		android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"          
+                android:gravity="top"
+               	android:background="#81a73a"
+                android:padding="10dp"
+                android:textColor="#fff"
+			    android:hint="ketik harga barang"
+			    android:inputType="number"
+			    android:layout_below="@id/edit_hargabarang_text"
+                
+   	    ></EditText>
+   	<CheckBox
+        android:id="@+id/edit_checkBisaNego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bisa Nego"
+        android:checked="true"
+        android:layout_below="@id/edit_hargabarang_edittext" />
+   	
+   	<TextView
+         android:id="@+id/edit_perkiraanberat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Perkiraan Berat (gram)"
+                android:layout_below="@id/edit_checkBisaNego"
+    ></TextView>
+   	<EditText
+   	    		android:id="@+id/edit_perkiraanberat_edittext"
+   	    		android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"          
+                android:gravity="top"
+                android:background="#b03944"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:inputType="number"
+			    android:hint="ketik perkiraan berat"
+			    android:layout_below="@id/edit_perkiraanberat_text"
+                
+   	    ></EditText>
+   	
+   	
+    
+   	
+   	<TextView
+         android:id="@+id/edit_stok_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Stok"
+                android:layout_below="@id/edit_perkiraanberat_edittext"
+    ></TextView>
+   	<EditText
+   	    		android:id="@+id/edit_stok_edittext"
+   	    		android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"          
+                android:gravity="top"
+                android:inputType="number"
+               	android:background="#b03944"
+                android:padding="10dp"
+                android:textColor="#fff"
+			    android:hint="ketik stok"
+			    android:layout_below="@id/edit_stok_text"
+                
+   	    ></EditText>
+   	
+   	<TextView
+         android:id="@+id/edit_jasakurir_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Pilih Jasa Kurir"
+                android:layout_below="@id/edit_stok_edittext"
+    ></TextView>
+ 
+    <CheckBox
+        android:id="@+id/edit_checkJasaKurirJNE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JNE"
+        android:layout_gravity="left"	        
+        android:checked="true" 
+		android:layout_below="@id/edit_jasakurir_text" />
+    
+    <CheckBox
+   	    android:id="@+id/edit_checkJasaKurirTIKI"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/edit_jasakurir_text"
+   	    android:layout_above="@+id/edit_pilihdelivery_text"
+   	    android:layout_alignRight="@id/edit_stok_edittext"
+   	    android:text="TIKI" />
+
+   	<CheckBox
+   	    android:id="@+id/edit_checkJasaKurirPos"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/edit_jasakurir_text"
+   	    android:layout_above="@id/edit_pilihdelivery_text"
+   	    android:layout_centerHorizontal="true"
+   	    android:text="Pos Kilat" />
+   	
+   	<TextView
+         android:id="@id/edit_pilihdelivery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Biaya Kirim Gratis?"
+                android:layout_below="@id/edit_checkJasaKurirJNE"
+    ></TextView>
+   	<Button 
+   	    android:layout_height="wrap_content"
+   	    android:layout_width="fill_parent" 
+   	    android:text="- Tidak ada kota yang dipilih -"
+   	    android:id="@+id/edit_pilihdelivery_button" 
+   	    android:padding="5dip" 
+   	    style="?android:attr/spinnerStyle"
+   	    android:layout_below="@id/edit_pilihdelivery_text"
+   	    
+   	    />
+   	<LinearLayout
+   	    android:id="@+id/edit_listSpecs"
+   	    android:layout_width="fill_parent"
+   	    android:orientation="vertical"  	    
+   	    android:layout_height="wrap_content">
+	   	    </LinearLayout>
+   	
+   	<TextView
+         android:id="@+id/edit_deskripsi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Deskripsi"
+                android:layout_below="@id/edit_pilihdelivery_button"
+    ></TextView>
+   	
+   	<EditText
+            android:id="@+id/edit_deskripsi_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#b03944"
+            android:drawSelectorOnTop="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:hint="Tuliskan deskripsi barang di sini"
+            android:lines="4"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/edit_deskripsi_text" />
+   	
+   	
+   	<TextView
+   	    android:id="@+id/edit_foto_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_margin="10dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:text="Gambar Produk"
+                android:layout_below="@id/edit_deskripsi_edittext"
+    ></TextView>
+   	
+   	<LinearLayout  android:id="@+id/edit_listImages"
+   	    android:layout_width="fill_parent"
+   	    android:orientation="horizontal"
+   	    
+   	    android:layout_height="wrap_content">
+   	
+   	</LinearLayout>
+   	<Button
+   	   	    android:id="@+id/edit_photo_button"
+   	   	    android:layout_width="100dip"
+   	   	    android:layout_height="48dip"
+   	   	    android:padding="10dip"
+   	   	    android:background="@layout/custom_button_red"
+   	   	    android:text="Tambah"
+   	   	    android:layout_gravity="right"
+   	   	    android:layout_below="@id/edit_foto_text"
+   	   	    ></Button>
+   	
+   	<ImageView 
+   	    android:id="@+id/photo_image"
+   	    android:layout_width="100dip"
+   	    android:layout_height="100dip"
+   	    />
+   	<ProgressBar
+   	    android:id="@+id/progressBar1"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:visibility="gone"
+   	    />
+   	
+   	<Button
+   	   	    android:id="@+id/edit_product_upload_save_button"
+   	   	    android:layout_width="wrap_content"
+   	   	    android:layout_height="wrap_content"
+   	   	    android:padding="10dip"
+   	   	    android:layout_centerInParent="true"
+   	   	    android:background="@layout/custom_button_red"
+   	   	    android:text="Simpan"
+   	   	    android:layout_below="@id/edit_photo_button"
+   	   	    ></Button>
+
+   	<ProgressBar
+   	    android:id="@+id/progressBar2"
+   	    android:visibility="gone"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignBottom="@id/edit_product_upload_save_button"
+   	    android:layout_toRightOf="@id/edit_product_upload_save_button" />
+    
+</LinearLayout>
+</RelativeLayout>
+</ScrollView>
