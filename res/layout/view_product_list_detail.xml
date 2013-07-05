@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+     >
+    
+<!-- Include Header -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/actionbar_layout" />
+    
+    <RelativeLayout
+        android:id="@+id/panel_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         >
+ <!-- panel gambar produk -->
+ <RelativeLayout android:id="@+id/panel_thumbnail" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="3dip"		
+        android:background="@drawable/image_bg"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+	    android:layout_marginRight="5dip">
+	    
+	    <!-- gambar produk -->	    
+<ImageView     
+			android:id="@+id/desc_img"   
+	        android:layout_width="100dip"
+	        android:layout_height="100dip"
+	        android:src="@drawable/skin_pack"/>
+</RelativeLayout>
+
+ 
+ <!-- nama produk -->
+ <TextView
+     android:id="@+id/desc_namaproduk"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_toRightOf="@id/panel_thumbnail"
+     android:layout_marginLeft="10dp"
+     android:layout_marginTop="10dp"
+     android:text="Kertas"
+     android:textStyle="bold"
+     android:textColor="#a30046"
+     android:textSize="25sp"
+     ></TextView>
+
+<!-- harga produk -->
+<TextView
+        android:id="@+id/desc_price"
+    	android:textSize="16sp"
+  		android:layout_marginLeft="10dp"
+  		android:layout_marginTop="7dp"
+  		android:layout_marginRight="15dp"
+    	android:layout_marginBottom="15dp"     
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/desc_namaproduk"
+        android:layout_toRightOf="@id/panel_thumbnail"
+        android:text="Rp 150,000"
+         />
+
+
+    <!-- tombol set terjual-->
+    <Button
+        android:id="@+id/btn_setterjual"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/desc_price"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/list_selector"
+        android:text="Set Terjual"
+        android:textSize="12sp"
+         ></Button>
+    
+    <!-- tombol edit barang-->
+    <Button
+        android:id="@+id/btn_editbarang"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/desc_price"
+        android:layout_toLeftOf="@id/btn_setterjual"
+        android:background="@drawable/list_selector"
+        android:text="Edit"
+         android:textSize="12sp"
+         ></Button>
+    
+<!-- label spesifikasi barang -->
+<TextView
+    android:id="@+id/desc_speclabel"
+    style="@style/SubMenuTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/panel_thumbnail"
+    android:text="Spesifikasi Barang"
+    android:textStyle="bold"
+    ></TextView>
+
+<!-- label kategori -->
+<TextView
+    android:id="@+id/lbl_desckategori"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_below="@id/desc_speclabel"
+    android:text="Kategori"
+    android:textStyle="bold"
+    ></TextView>
+
+<!-- value kategori -->
+<TextView
+    android:id="@+id/val_desckategori"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/desc_speclabel"
+    android:layout_marginLeft="150dp"
+    android:text="MTB"
+    
+    ></TextView>
+
+<!-- label kondisi -->
+<TextView 
+    android:id="@+id/lbl_desckondisi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/lbl_desckategori"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp" 
+    android:text="Kondisi"
+    android:textStyle="bold"
+    />
+<!-- value kondisi -->
+<TextView
+    android:id="@+id/val_desckondisi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/lbl_desckategori"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="150dp"
+    android:text="Baru"
+    
+    ></TextView>
+<!-- label deskripsi barang -->
+<TextView
+    android:id="@+id/lbl_desc"
+    style="@style/SubMenuTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/lbl_desckondisi"
+    android:text="Deskripsi Barang"
+    android:textStyle="bold"
+    android:layout_marginTop="20dp"
+    ></TextView>
+
+<TextView 
+    android:id="@+id/desc_deskripsibarang"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_below="@id/lbl_desc"
+    android:text="Tulis deskripsi di sini"
+    />
+ </RelativeLayout>
+</LinearLayout>

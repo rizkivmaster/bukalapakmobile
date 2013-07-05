@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+  <!-- Include Header -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/actionbar_layout" />
+    
+<!-- Judul Kirim Barang-->
+<TextView 
+    android:id="@+id/lbl_kirimbarang"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:text="Kirim Barang"
+    android:textStyle="bold"
+    android:textSize="20sp"
+    />
+
+<!-- Judul Jasa Pengiriman-->
+<TextView 
+    android:id="@+id/lbl_kirimbarang"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="20dp"
+    android:text="Jasa Pengiriman: JNE REG"
+    />
+
+<!--label Nomor Resi-->
+<TextView 
+    android:id="@+id/lbl_nomorresi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:text="Nomor Resi"
+    />
+
+<!-- text field nomor resi -->
+<EditText 
+    android:id="@+id/txtfield_nomorresi"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:inputType="number"   
+    />
+
+<!-- label nama kurir -->
+<TextView 
+    android:id="@+id/lbl_namakurir"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:text="Tulis di sini jika menggunakan kurir lain"  
+    ></TextView>
+
+<!-- text field nama kurir -->
+<EditText 
+    android:id="@+id/txtfield_namakurir"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:inputType="text"  
+    />
+
+
+<!-- teks ongkos kirim sistem -->
+<TextView
+    android:id="@+id/lbl_oks"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:text="Ongkos Kirim Sistem: 8000"
+    ></TextView>
+
+<!-- panel oks -->
+<LinearLayout
+    android:id="@+id/panel_oks"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    >
+<!-- teks ongkos kirim sistem beda -->
+<TextView
+    android:id="@+id/lbl_otheroks"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:text="Ongkos kirim beda?"
+    ></TextView>
+
+<TextView
+    android:id="@+id/click_otheroks"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:text="Lampirkan Resi Lengkap"
+    android:textColor="#a38228"
+    android:clickable="true"
+    ></TextView>
+</LinearLayout>
+
+<!-- panel tombol -->
+<LinearLayout
+    android:id="@+id/panel_btn"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    >
+    
+    <!-- tombol submit -->
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+   
+        android:layout_marginTop="10dp"
+        android:background="@drawable/list_selector"
+        android:text="Submit"
+         ></Button>
+    
+      <!-- tombol batal -->
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/list_selector"
+        android:text="Batal"
+         ></Button>
+    
+</LinearLayout>
+</LinearLayout>

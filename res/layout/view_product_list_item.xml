@@ -19,7 +19,11 @@
         android:id="@+id/check_product_mylapak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"      
-        android:layout_marginTop="10dip" />
+        android:layout_marginTop="10dip"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+         />
 	    
 	    <!-- thumbnail image -->
 		<ImageView     
@@ -94,28 +98,29 @@
   		
   		android:layout_marginLeft="10dp"
   		android:layout_marginTop="1dp"
-  		android:layout_marginRight="15dp"
-    	android:layout_marginBottom="15dp"     
+  		android:layout_marginRight="25dp"
+    
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Rp 150,000"
          />
       
-     <!-- Rightend Arrow    
+     <!-- Rightend Arrow    -->
      <ImageView android:layout_width="wrap_content"
      	android:layout_height="wrap_content"
      	android:src="@drawable/arrow"
      	android:layout_alignParentRight="true"
      	android:layout_centerVertical="true"
      	android:layout_marginRight="10dp"
-     	/>-->
+     	/>
 
 	<Button
 	    android:id="@+id/btn_edit_product_mylapak"
 	    android:layout_width="35dp"
 	    android:layout_height="35dp"
-	    android:layout_alignBottom="@+id/panel_data_produk"
-	    android:layout_alignRight="@+id/price"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="37dp"
+	    android:layout_below="@id/price_product_mylapak"
 	    android:drawableTop="@drawable/content_edit" />
 
 </RelativeLayout>

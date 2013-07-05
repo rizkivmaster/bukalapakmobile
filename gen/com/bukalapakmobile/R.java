@@ -48,16 +48,25 @@ public final class R {
         public static final int plus=0x7f02001f;
         public static final int plusminus=0x7f020020;
         public static final int rating=0x7f020021;
-        public static final int social_reply=0x7f020022;
-        public static final int social_reply1=0x7f020023;
-        public static final int trash=0x7f020024;
-        public static final int write_arrow=0x7f020025;
+        public static final int skin_pack=0x7f020022;
+        public static final int social_reply=0x7f020023;
+        public static final int social_reply1=0x7f020024;
+        public static final int trash=0x7f020025;
+        public static final int write_arrow=0x7f020026;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int action_settings=0x7f080090;
         public static final int btnLogin=0x7f08008b;
         public static final int btn_action=0x7f080065;
         public static final int btn_edit_product_mylapak=0x7f080061;
+=======
+        public static final int action_settings=0x7f08008b;
+        public static final int btnLogin=0x7f080086;
+        public static final int btn_action=0x7f080059;
+        public static final int btn_edit_product_mylapak=0x7f080056;
+        public static final int btn_editbarang=0x7f080047;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int btn_events=0x7f08000d;
         public static final int btn_friends=0x7f08000a;
         public static final int btn_messageAll=0x7f080022;
@@ -68,6 +77,7 @@ public final class R {
         public static final int btn_photos=0x7f08000e;
         public static final int btn_places=0x7f08000c;
         public static final int btn_send=0x7f08001c;
+<<<<<<< HEAD
         public static final int button1=0x7f08008e;
         public static final int checkBisaNego=0x7f080074;
         public static final int checkJasaKurirJNE=0x7f08007a;
@@ -78,10 +88,30 @@ public final class R {
         public static final int controlBtn=0x7f080039;
         public static final int deskripsi_edittext=0x7f080081;
         public static final int deskripsi_text=0x7f080080;
+=======
+        public static final int btn_setterjual=0x7f080046;
+        public static final int button1=0x7f080089;
+        public static final int checkBisaNego=0x7f08006c;
+        public static final int checkJasaKurirJNE=0x7f080072;
+        public static final int checkJasaKurirPos=0x7f080075;
+        public static final int checkJasaKurirTIKI=0x7f080073;
+        public static final int check_product_mylapak=0x7f08004f;
+        public static final int click_otheroks=0x7f08003f;
+        public static final int compose_msg=0x7f08001b;
+        public static final int controlBtn=0x7f080061;
+        public static final int desc_deskripsibarang=0x7f08004e;
+        public static final int desc_img=0x7f080043;
+        public static final int desc_namaproduk=0x7f080044;
+        public static final int desc_price=0x7f080045;
+        public static final int desc_speclabel=0x7f080048;
+        public static final int deskripsi_edittext=0x7f080079;
+        public static final int deskripsi_text=0x7f080078;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int detail_message=0x7f080017;
         public static final int detail_msg=0x7f080013;
         public static final int divider=0x7f080002;
         public static final int divider1=0x7f080004;
+<<<<<<< HEAD
         public static final int edit_checkBisaNego=0x7f080045;
         public static final int edit_checkJasaKurirJNE=0x7f08004b;
         public static final int edit_checkJasaKurirPos=0x7f08004e;
@@ -142,6 +172,48 @@ public final class R {
         public static final int menu_list=0x7f080010;
         public static final int menu_name=0x7f080014;
         public static final int menu_settings=0x7f08008f;
+=======
+        public static final int field_edittext=0x7f08005c;
+        public static final int field_spinner=0x7f08005d;
+        public static final int field_text=0x7f08005b;
+        public static final int finishIcon=0x7f080060;
+        public static final int footer_logout=0x7f080008;
+        public static final int footer_text=0x7f080007;
+        public static final int foto_text=0x7f08007c;
+        public static final int greeting=0x7f08000f;
+        public static final int hargabarang_edittext=0x7f08006b;
+        public static final int hargabarang_text=0x7f08006a;
+        public static final int header=0x7f080001;
+        public static final int headerLogo=0x7f080081;
+        public static final int home_icon=0x7f080005;
+        public static final int home_root=0x7f080006;
+        public static final int image_product_mylapak=0x7f080050;
+        public static final int jasakurir_text=0x7f080071;
+        public static final int kategori_text=0x7f080063;
+        public static final int kondisi_text=0x7f080066;
+        public static final int lbl_desc=0x7f08004d;
+        public static final int lbl_desckategori=0x7f080049;
+        public static final int lbl_desckondisi=0x7f08004b;
+        public static final int lbl_inbox=0x7f080021;
+        public static final int lbl_kirimbarang=0x7f080037;
+        public static final int lbl_namakurir=0x7f08003a;
+        public static final int lbl_nomorresi=0x7f080038;
+        public static final int lbl_oks=0x7f08003c;
+        public static final int lbl_otheroks=0x7f08003e;
+        public static final int link_to_password=0x7f080087;
+        public static final int link_to_register=0x7f080088;
+        public static final int list=0x7f080019;
+        public static final int listImages=0x7f08007a;
+        public static final int listSpecs=0x7f080077;
+        public static final int list_image=0x7f080012;
+        public static final int list_mylapak=0x7f08005a;
+        public static final int login_email_username=0x7f080083;
+        public static final int login_password=0x7f080085;
+        public static final int menu_desc=0x7f080015;
+        public static final int menu_list=0x7f080010;
+        public static final int menu_name=0x7f080014;
+        public static final int menu_settings=0x7f08008a;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int message_check=0x7f080025;
         public static final int message_date=0x7f080028;
         public static final int message_delete=0x7f080018;
@@ -152,13 +224,25 @@ public final class R {
         public static final int msg_date=0x7f080020;
         public static final int msg_misc=0x7f08001f;
         public static final int msg_sender=0x7f08001d;
+<<<<<<< HEAD
         public static final int namabarang_edittext=0x7f08006d;
         public static final int namabarang_text=0x7f08006c;
+=======
+        public static final int namabarang_edittext=0x7f080065;
+        public static final int namabarang_text=0x7f080064;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int panelAction=0x7f080016;
+        public static final int panel_btn=0x7f080040;
         public static final int panel_compose=0x7f08001a;
+<<<<<<< HEAD
         public static final int panel_data_produk=0x7f08005c;
+=======
+        public static final int panel_data_produk=0x7f080051;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int panel_data_trans=0x7f08002a;
+        public static final int panel_desc=0x7f080041;
         public static final int panel_header=0x7f080000;
+<<<<<<< HEAD
         public static final int perkiraanberat_edittext=0x7f080076;
         public static final int perkiraanberat_text=0x7f080075;
         public static final int photo_button=0x7f080083;
@@ -190,6 +274,40 @@ public final class R {
         public static final int title_mylapak=0x7f080063;
         public static final int title_product_mylapak=0x7f08005d;
         public static final int top=0x7f08003a;
+=======
+        public static final int panel_oks=0x7f08003d;
+        public static final int panel_thumbnail=0x7f080042;
+        public static final int perkiraanberat_edittext=0x7f08006e;
+        public static final int perkiraanberat_text=0x7f08006d;
+        public static final int photo_button=0x7f08007b;
+        public static final int photo_image=0x7f08007d;
+        public static final int pilihdelivery_button=0x7f080076;
+        public static final int pilihdelivery_text=0x7f080074;
+        public static final int price_product_mylapak=0x7f080055;
+        public static final int price_trans=0x7f08002d;
+        public static final int product_trans=0x7f08002b;
+        public static final int product_upload_save_button=0x7f08007f;
+        public static final int progress=0x7f08005f;
+        public static final int progressBar1=0x7f08007e;
+        public static final int progressBar2=0x7f080080;
+        public static final int radioBaru=0x7f080069;
+        public static final int radioBekas=0x7f080068;
+        public static final int radioKondisi=0x7f080067;
+        public static final int realtabcontent=0x01010000;
+        public static final int refresh_icon=0x7f080003;
+        public static final int spinner_action=0x7f080058;
+        public static final int status_product_mylapak=0x7f080053;
+        public static final int stock_product_mylapak=0x7f080054;
+        public static final int stok_edittext=0x7f080070;
+        public static final int stok_text=0x7f08006f;
+        public static final int text_email=0x7f080082;
+        public static final int text_password=0x7f080084;
+        public static final int thumb=0x7f08005e;
+        public static final int thumbnail=0x7f080011;
+        public static final int title_mylapak=0x7f080057;
+        public static final int title_product_mylapak=0x7f080052;
+        public static final int top=0x7f080062;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int total_item_trans=0x7f08002c;
         public static final int trans_arrived=0x7f080034;
         public static final int trans_btnsend=0x7f080036;
@@ -200,6 +318,10 @@ public final class R {
         public static final int trans_sent=0x7f080033;
         public static final int trans_status=0x7f080030;
         public static final int trans_transfered=0x7f080035;
+        public static final int txtfield_namakurir=0x7f08003b;
+        public static final int txtfield_nomorresi=0x7f080039;
+        public static final int val_desckategori=0x7f08004a;
+        public static final int val_desckondisi=0x7f08004c;
     }
     public static final class layout {
         public static final int actionbar_layout=0x7f030000;
@@ -219,9 +341,15 @@ public final class R {
         public static final int tab_frag1_layout=0x7f03000e;
         public static final int tab_frag2_layout=0x7f03000f;
         public static final int transaction_item=0x7f030010;
+<<<<<<< HEAD
         public static final int transaction_list=0x7f030011;
         public static final int view_product_list_edit_image=0x7f030012;
         public static final int view_product_list_edit_main=0x7f030013;
+=======
+        public static final int transaction_kirimbarang=0x7f030011;
+        public static final int transaction_list=0x7f030012;
+        public static final int view_product_list_detail=0x7f030013;
+>>>>>>> 19bb89c14f6880a82ce9979ba16fffad0fa70d3c
         public static final int view_product_list_item=0x7f030014;
         public static final int view_product_list_main=0x7f030015;
         public static final int view_product_upload_field=0x7f030016;
