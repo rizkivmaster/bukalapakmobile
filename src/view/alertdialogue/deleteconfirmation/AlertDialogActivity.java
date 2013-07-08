@@ -28,7 +28,7 @@ public class AlertDialogActivity extends Activity {
 						AlertDialogActivity.this).create();
 
 				// Setting Dialog Title
-				alertDialog.setTitle("Alert Dialog");
+				alertDialog.setTitle("Alert");
 
 				// Setting Dialog Message
 				alertDialog.setMessage("Welcome to AndroidHive.info");
