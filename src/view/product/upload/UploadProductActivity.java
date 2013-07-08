@@ -421,6 +421,7 @@ public class UploadProductActivity extends Activity {
 				String name = cate_src.getLast().getString(Integer.toString(idCode));
 				listKategori.add((String) item.getTitle());
 				kategori.setText(name);
+				
 			} catch (JSONException e3) {
 				// TODO Auto-generated catch block
 				e3.printStackTrace();
